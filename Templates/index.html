@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Projeto Integrador </title>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  
+  <!-- BLOCO DE PERGUNTAS -->
+  
+  <div class="card">
+    <div class="container" ></div>
+    <div class="icon">
+      <img src="static/logo.png" >
+    </div>
+       <h1>Sugestão de Carreira Profissional</h1>
+
+       <p class="prompt">Qual carreira profissional você deveria seguir? Digite algumas informações sobre suas habilidades e interesses e eu vou te dar algumas sugestões.</p>
+         <form class="input-form"  method="POST" action="/processar">
+         <label for="info">Digite suas informações:</label>
+        <input type="text" id="info" name="info" placeholder="Ex: Sou bom em tecnologia e gosto disso.">
+        <button href="#" type="submit" id="submit-btn">Obter Sugestão</button>
+       </form>
+       
+   <!-- BLOCO DE RESPOSTAS -->
+   
+    <div>
+      <div class="container2">
+          <div><h4>{{ resultado }}</h1></div><!--
+  
+          --><div><p>{{ career }}</p></div>
+      </div>
+    </div>
+    </div>
+  </div>
+  
+  <!-- SESSÃO DE LINKS -->
+    
+  
+  
+  <!-- ESTILIZAÇÃO -->
+    <style>
+    * {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    background-color: #313131;
+}
+   .container {
+    height: 215px;
+    
+    position: relative;
+}
+/** Card **/
+   .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 900px;
+    width: 900px;
+    padding: 25px;
+    color: #ffffff;
+    background-color: #272727;
+    text-align: justify;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.389);
+    position: relative;
+    margin-top: 50px;
+    border-left: 2px solid #10d3bf;
+}
+
+   .card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 20px solid transparent;
+    border-top: 20px solid #10d2cc;
+    border-right: 20px solid #10d2cc;
+}
+
+
+/** BLOCO DE PERGUNTAS **/
+
+    .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+  }
+  
+    h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #ffffff
+   
+  }
+  
+    .prompt {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+  }
+  
+    .input-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  
+    label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+    input {
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+    #submit-btn {
+    background-color: #272727;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-bottom:  2px solid #17efdf;
+    border-left: 2px solid #17efdf;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+  }
+  
+    #submit-btn:hover {
+    background-color: #17efdf;
+    color: #000000;
+  }
+  
+    .output {
+    font-size: 2rem;
+  }
+    .icon {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+    .icon img {
+    width: 200px;
+    margin: 20px;
+    justify-content: center;
+  }
+
+
+
+
+ /** BLOCO DE RESPOSTAS **/
+
+    #txtSugestion {
+    border-left: 1px solid #10d3bf;
+    background-color: #272727;
+    font-size: 12px;
+    color: #e0e0e0;
+    resize: none;
+    height: auto;
+    width: 100%;
+    display: block;
+    margin: 5px 0;
+    flex-direction: column;
+    margin-bottom: 0px;
+    padding: 10px 0px;
+  }
+   
+  .container2 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  h4 {
+    font-size:2rem;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+
+ 
+  
+    </style>
+
+
+    

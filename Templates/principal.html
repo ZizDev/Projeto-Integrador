@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Projeto Integrador </title>
+  
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <!-- CARD -->
+    <div class="card">
+      
+        <!-- IMAGEM -->
+        <div class="icon">
+          
+
+
+            <img src="static/icon.jpg" >
+        </div>
+        
+        <!-- CONTEÚDO -->
+        <div class="content">
+           <h3> Profissão </h3>
+           <p>
+               A carreira profissional é um dos principais fatores para o sucesso de qualquer pessoa. 
+                Por isso, é fundamental que se faça uma escolha consciente, que leve em conta os interesses, habilidades e aptidões. 
+                É importante que cada um saiba quais são seus objetivos e metas profissionais, para que possa traçar um plano de carreira eficaz. É necessário ter disciplina, dedicação e foco para alcançar os resultados desejados.
+            </p>
+           <h3> Autoconhecimento </h3>
+            <p> 
+           O autoconhecimento é uma ferramenta essencial para uma escolha profissional. É importante conhecer nossas habilidades, valores e motivações interesses para que possamos encontrar o trabalho que melhor se encaixe em nossa personalidade.
+            </p>
+           <h3> Teste vocacional  </h3>
+            <p>Aqui você  descobre quais carreiras e profissões são mais adequadas para o seu perfil! <br>
+            <br>
+              Nosso teste avalia interesses, habilidades, valores e outros fatores para ajudar a identificar as carreiras que melhor se encaixam naquilo que voce procura.
+            </p>
+         <h3> Se interessou? </h3>
+           <p> Faça já o seu teste clicando no botão abaixo: </p>
+           <!--link -->
+           <a class="btn" href="/mediador" id="read_button" > Iniciar </a>
+        </div>
+    </div>
+  
+  <!-- CSS -->
+    <style>
+    * {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #313131;
+}
+
+/** Card **/
+   .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 900px;
+    border-top: 1px solid #1ddabe;
+    width: 900px;
+    padding: 25px;
+    background-color: #313131;
+    text-align: justify;
+    
+    position: relative;
+    margin-top: 50px;
+}
+
+   .card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 20px solid transparent;
+    border-top: 20px solid #10d2cc;
+    border-right: 20px solid #10d2cc;
+}
+
+/** Icon **/
+   .icon {
+    margin-bottom: 20px;
+}
+
+   .icon img {
+    width: 800px;
+    margin: 20px;
+}
+
+/** Content **/
+   .content {
+    height: 215px;
+    
+    position: relative;
+}
+
+   .card h3 {
+  border-left: 4px solid #79e834;
+}
+
+   .content h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    font-size: 30px;
+    position: relative;
+    color: #ffffff;
+    border-left: 4px solid #10cfbe;
+}
+
+   .content h3::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 40px;
+    background-color: #10d3bf;
+    bottom: 4px;
+    border-radius: 100px;
+}
+
+
+   .content p {
+    color: #b7b7b7;
+    margin-bottom: 60px;
+}
+
+/** Read More/Less Button **/
+   #read_button {
+    border: none;
+    padding: 10px;
+    border-radius: 2px;
+    display: block;
+    position: relative;
+    
+    margin-top: 100px;
+    background-color: #10cfbe;
+    color: #313131;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+
+  </style>
+ </body>
+</html>
